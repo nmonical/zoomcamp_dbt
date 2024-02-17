@@ -32,8 +32,8 @@ SELECT
 FROM {{ source('staging', 'green_taxi') }}
 where vendorid is not null
 --dbt build --m <model.sql> --var 'is_test_run: false'
-{% if var('is_test_run', default=true) %}
+--{% if var('is_test_run', default=true) %}
 
-LIMIT 100
+--LIMIT 100
 
-{% endif %}
+--{% endif %}
